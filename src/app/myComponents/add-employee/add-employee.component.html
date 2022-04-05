@@ -3,13 +3,31 @@
     <h3>
         Employee Addition
     </h3>
-    <form action="">
-        <!-- <input type="text" [ngModel]="name" placeholder="Enter Employee Name">
-        <input type="text" [ngModel]="email" placeholder="Enter Employee Email">
-        <input type="text" [ngModel]="phone" placeholder="Enter Employee Phone">
-        <input type="text" [ngModel]="address" placeholder="Enter Employee Address">
-        <input type="text" [ngModel]="salary" placeholder="Enter Employee Salary">
-        <input type="text" [ngModel]="position" placeholder="Enter Employee Position"> -->
+    <form (ngSubmit)="onSubmit()" >
+        <div>
+            <label for="empName">Employee Name</label>
+            <input type="text" [(ngModel)]="name"  id="empName" placeholder="Enter Employee Name" name="name">
+        </div>
+        <div>
+            <label for="empName">Employee Email</label>
+            <input type="text" [(ngModel)]="email" name="email" id="empEmail" placeholder="Enter Employee Email">
+        </div>
+        <div>
+            <label for="empName">Employee Phone</label>
+            <input type="text" [(ngModel)]="phone" name="phone" id="empPhone" placeholder="Enter Employee Phone">
+        </div>
+        <div>
+            <label for="empName">Employee Address</label>
+            <input type="text" [(ngModel)]="address" name="address" id="empAddress" placeholder="Enter Employee Address">
+        </div>
+        <div>
+            <label for="empName">Employee Salary</label>
+            <input type="text" [(ngModel)]="salary" name="salary" id="empSalary" placeholder="Enter Employee Salary">
+        </div>
+        <div>
+            <label for="empName">Employee Position</label>
+            <input type="text" [(ngModel)]="position" name="position" id="empPosition" placeholder="Enter Employee Position">
+        </div>
         <button type="submit">Add an Employee</button>
     </form>
 
