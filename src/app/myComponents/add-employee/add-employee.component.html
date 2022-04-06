@@ -3,13 +3,13 @@
     <h3>
         Employee Addition
     </h3>
-    <form action="">
-        <!-- <input type="text" [ngModel]="name" placeholder="Enter Employee Name">
-        <input type="text" [ngModel]="email" placeholder="Enter Employee Email">
-        <input type="text" [ngModel]="phone" placeholder="Enter Employee Phone">
-        <input type="text" [ngModel]="address" placeholder="Enter Employee Address">
-        <input type="text" [ngModel]="salary" placeholder="Enter Employee Salary">
-        <input type="text" [ngModel]="position" placeholder="Enter Employee Position"> -->
+    <form (ngSubmit)="onSubmit()">
+        <input type="text" [(ngModel)]="name" placeholder="Enter Employee Name">
+        <input type="text" [(ngModel)]="email" placeholder="Enter Employee Email">
+        <input type="text" [(ngModel)]="phone" placeholder="Enter Employee Phone">
+        <input type="text" [(ngModel)]="address" placeholder="Enter Employee Address">
+        <input type="text" [(ngModel)]="salary" placeholder="Enter Employee Salary">
+        <input type="text" [(ngModel)]="position" placeholder="Enter Employee Position">
         <button type="submit">Add an Employee</button>
     </form>
 
