@@ -1,3 +1,10 @@
 <div class="container">
-    <app-add-employee></app-add-employee>
+    <app-add-employee (addEmployee)="EmployeeAdd($event)"></app-add-employee>
+</div>
+<div class="container">
+    <div *ngIf="allEmployee.length==0; else elseBlock">No Employee saved.</div>
+    <ng-template #elseBlock>
+
+        <app-employee-table [allEmployee]="allEmployee"></app-employee-table>
+    </ng-template>
 </div>

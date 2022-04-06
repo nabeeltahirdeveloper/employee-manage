@@ -1,15 +1,35 @@
-<div>
+<div class="my-3">
 
     <h3>
         Employee Addition
     </h3>
     <form (ngSubmit)="onSubmit()">
-        <input type="text" [(ngModel)]="name" placeholder="Enter Employee Name">
-        <input type="text" [(ngModel)]="email" placeholder="Enter Employee Email">
-        <input type="text" [(ngModel)]="phone" placeholder="Enter Employee Phone">
-        <input type="text" [(ngModel)]="address" placeholder="Enter Employee Address">
-        <input type="text" [(ngModel)]="salary" placeholder="Enter Employee Salary">
-        <input type="text" [(ngModel)]="position" placeholder="Enter Employee Position">
+        <div>
+            <label class="col-6" for="name">Employee Name</label>
+            <input class="col-6" type="text" [(ngModel)]="name" name="empName" placeholder="Enter Employee Name">
+        </div>
+        <div>
+            <label class="col-6" for="email">Employee Email</label>
+            <input class="col-6" type="text" [(ngModel)]="email" name="empEmail" placeholder="Enter Employee Email">
+        </div>
+        <div>
+            <label class="col-6" for="phone">Employee Phone</label>
+            <input class="col-6" type="text" [(ngModel)]="phone" name="empPhone" placeholder="Enter Employee Phone">
+        </div>
+        <div>
+            <label class="col-6" for="address">Employee Address</label>
+            <input class="col-6" type="text" [(ngModel)]="address" name="empAddress"
+                placeholder="Enter Employee Address">
+        </div>
+        <div>
+            <label class="col-6" for="salary">Employee Salary</label>
+            <input class="col-6" type="text" [(ngModel)]="salary" name="empSalary" placeholder="Enter Employee Salary">
+        </div>
+        <div>
+            <label class="col-6" for="position">Employee Position</label>
+            <input class="col-6" type="text" [(ngModel)]="position" name="empPosition"
+                placeholder="Enter Employee Position">
+        </div>
         <button type="submit">Add an Employee</button>
     </form>
 
