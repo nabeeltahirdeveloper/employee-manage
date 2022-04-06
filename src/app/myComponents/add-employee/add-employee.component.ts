@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { Employee } from 'src/app/Employee';
 
 @Component({
@@ -14,12 +14,19 @@ export class AddEmployeeComponent implements OnInit {
   salary!: number;
   position!: string;
   employeeData!: Employee
+  buttonName: string = 'Add Employee';
 
   @Output() addEmployee : EventEmitter<Employee> = new EventEmitter();
+  @Output() updateEmployee : EventEmitter<Employee> = new EventEmitter();
+  @Input() updateEmployeeData!: Employee
+  constructor() {
+   
 
-  constructor() { }
-
+  }
+  
   ngOnInit(): void {
+    
+
   }
   onSubmit() {
     this.employeeData = {
@@ -30,6 +37,31 @@ export class AddEmployeeComponent implements OnInit {
       salary: this.salary,
       position: this.position
     }
+    if (this.buttonName == 'Add Employee') {
     this.addEmployee.emit(this.employeeData);
+    }
+    else {
+      this.updateEmployee.emit(this.employeeData);
+      this.buttonName = 'Add Employee';
+    }
+    this.name = '';
+    this.email = '';
+    this.phone = NaN;
+    this.address = '';
+    this.salary = NaN;
+    this.position = '';
+
   }
+  updateEmployeeDataParent(updateEmployeData:Employee){
+    console.log("starting");
+      
+      this.name = updateEmployeData.name;
+      this.email = updateEmployeData.email;
+      this.phone = updateEmployeData.phone;
+      this.address = updateEmployeData.address;
+      this.salary = updateEmployeData.salary;
+      this.position = updateEmployeData.position;
+      this.buttonName = 'Update Employee';
+
+}
 }

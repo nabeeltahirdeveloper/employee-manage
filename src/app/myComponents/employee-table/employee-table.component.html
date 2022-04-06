@@ -9,6 +9,8 @@
                 <th scope="col">Address</th>
                 <th scope="col">Salary</th>
                 <th scope="col">Position</th>
+                <th scope="col">Action</th>
+
             </tr>
         </thead>
         <tbody *ngFor="let employee of allEmployee; index as i;">
@@ -20,6 +22,10 @@
                 <td class="table-active">{{employee.address}}</td>
                 <td class="table-active">{{employee.salary}}</td>
                 <td class="table-active">{{employee.position}}</td>
+                <td class="table-active">
+                    <button (click)="updateEmployee(i)">Update</button>
+                    <button (click)="deleteEmployee(i)">Delete</button>
+                </td>
             </tr>
         </tbody>
     </table>
