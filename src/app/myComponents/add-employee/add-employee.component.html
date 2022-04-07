@@ -1,0 +1,66 @@
+<div class="container">
+  <h3>Employee Addition</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="input-feild">
+      <label class="col-6" for="name">Employee Name</label>
+      <input
+        class="col-6"
+        type="text"
+        [(ngModel)]="name"
+        name="empName"
+        placeholder="Enter Employee Name"
+      />
+    </div>
+    <div class="input-feild">
+      <label class="col-6" for="email">Employee Email</label>
+      <input
+        class="col-6"
+        type="text"
+        [(ngModel)]="email"
+        name="empEmail"
+        placeholder="Enter Employee Email"
+      />
+    </div>
+    <div class="input-feild">
+      <label class="col-6" for="phone">Employee Phone</label>
+      <input
+        class="col-6"
+        type="text"
+        [(ngModel)]="phone"
+        name="empPhone"
+        placeholder="Enter Employee Phone"
+      />
+    </div>
+    <div class="input-feild">
+      <label class="col-6" for="address">Employee Address</label>
+      <input
+        class="col-6"
+        type="text"
+        [(ngModel)]="address"
+        name="empAddress"
+        placeholder="Enter Employee Address"
+      />
+    </div>
+    <div class="input-feild">
+      <label class="col-6" for="salary">Employee Salary</label>
+      <input
+        class="col-6"
+        type="text"
+        [(ngModel)]="salary"
+        name="empSalary"
+        placeholder="Enter Employee Salary"
+      />
+    </div>
+    <div class="input-feild">
+      <label class="col-6" for="position">Employee Position</label>
+      <input
+        class="col-6"
+        type="text"
+        [(ngModel)]="position"
+        name="empPosition"
+        placeholder="Enter Employee Position"
+      />
+    </div>
+    <button type="submit">Add Employee</button>
+  </form>
+</div>

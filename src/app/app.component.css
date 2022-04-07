@@ -1,0 +1,9 @@
+.container {
+  width: 75%;
+  background-color: #fff;
+  margin: 0 auto;
+  display: flex;
+}
+.manage__container {
+  flex: 1;
+}

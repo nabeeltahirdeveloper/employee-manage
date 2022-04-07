@@ -1,0 +1,35 @@
+.container {
+  min-width: 80%;
+  margin: 0 auto;
+}
+table {
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+table th {
+  background-color: var(--clr-primary-medium);
+  padding: 0.7rem;
+  color: #eee;
+}
+table th:first-of-type {
+  background-color: var(--clr-primary-dark);
+}
+table td {
+  padding: 0.4rem;
+}
+table tbody tr {
+  background-color: #fff;
+  border-bottom: 2px solid #ddd;
+}
+table tbody tr:nth-of-type(even) {
+  background-color: var(--clr-primary-light);
+}
+table tbody tr:last-child {
+  border-bottom: 1px solid black;
+}
